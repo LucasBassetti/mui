@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@temp-mui/styled-engine": ["./node_modules/@temp-mui/styled-engine-sc"]
+    }
+  }
+}

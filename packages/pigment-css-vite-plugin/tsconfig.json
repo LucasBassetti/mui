@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "paths": {
+      "@babel/core": ["./node_modules/@babel/core"],
+      "@temp-mui/system": ["./packages/mui-system/src"],
+      "@temp-mui/system/*": ["./packages/mui-system/src/*"],
+      "@temp-mui/utils": ["./packages/mui-utils/src"],
+      "@temp-mui/utils/*": ["./packages/mui-utils/src/*"],
+      "@pigment-css/react": ["./packages/pigment-css-react/src"],
+      "@pigment-css/react/*": ["./packages/pigment-css-react/src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["./tsup.config.ts"]
+}

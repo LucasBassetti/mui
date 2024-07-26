@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "allowJs": true,
+    "lib": ["ES2017", "ES2021.String", "DOM"],
+    "composite": true,
+    "noEmit": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "@temp-mui/system": ["./packages/mui-system/src"],
+      "@temp-mui/system/*": ["./packages/mui-system/src/*"],
+      "@temp-mui/utils": ["./packages/mui-utils/src"],
+      "@temp-mui/utils/*": ["./packages/mui-utils/src/*"]
+    },
+    "types": ["node", "mocha"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["./tsup.config.ts"]
+}
