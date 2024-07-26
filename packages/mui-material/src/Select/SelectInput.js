@@ -3,7 +3,7 @@ import * as React from 'react';
 import { isFragment } from 'react-is';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import MuiError from '@temp-mui/internal-babel-macros/MuiError.macro';
+
 import composeClasses from '@temp-mui/utils/composeClasses';
 import useId from '@temp-mui/utils/useId';
 import refType from '@temp-mui/utils/refType';
@@ -373,7 +373,7 @@ const SelectInput = React.forwardRef(function SelectInput(props, ref) {
 
     if (multiple) {
       if (!Array.isArray(value)) {
-        throw new MuiError(
+        throw new Error(
           'MUI: The `value` prop must be an array ' +
             'when using the `Select` component with `multiple`.',
         );

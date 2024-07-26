@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import elementTypeAcceptingRef from '@temp-mui/utils/elementTypeAcceptingRef';
 import refType from '@temp-mui/utils/refType';
-import MuiError from '@temp-mui/internal-babel-macros/MuiError.macro';
 import { TextareaAutosize } from '@temp-mui/base';
 import { isHostComponent } from '@temp-mui/base/utils';
 import composeClasses from '@temp-mui/utils/composeClasses';
@@ -406,7 +405,7 @@ const InputBase = React.forwardRef(function InputBase(inProps, ref) {
     if (!isControlled) {
       const element = event.target || inputRef.current;
       if (element == null) {
-        throw new MuiError(
+        throw new Error(
           'MUI: Expected valid input target. ' +
             'Did you use a custom `inputComponent` and forget to forward refs? ' +
             'See https://mui.com/r/input-component-ref-interface for more info.',

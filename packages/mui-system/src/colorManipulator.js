@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import clamp from '@temp-mui/utils/clamp';
-import MuiError from '@temp-mui/internal-babel-macros/MuiError.macro';
 
 /**
  * Returns a number whose value is limited to the given range.
@@ -69,7 +68,7 @@ export function decomposeColor(color) {
   const type = color.substring(0, marker);
 
   if (['rgb', 'rgba', 'hsl', 'hsla', 'color'].indexOf(type) === -1) {
-    throw new MuiError(
+    throw new Error(
       'MUI: Unsupported `%s` color.\n' +
         'The following formats are supported: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla(), color().',
       color,
@@ -86,7 +85,7 @@ export function decomposeColor(color) {
       values[3] = values[3].slice(1);
     }
     if (['srgb', 'display-p3', 'a98-rgb', 'prophoto-rgb', 'rec-2020'].indexOf(colorSpace) === -1) {
-      throw new MuiError(
+      throw new Error(
         'MUI: unsupported `%s` color space.\n' +
           'The following color spaces are supported: srgb, display-p3, a98-rgb, prophoto-rgb, rec-2020.',
         colorSpace,

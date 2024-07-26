@@ -97,7 +97,7 @@ function muiError({ references, babel, config, source }) {
     const newExpressionPath = babelPath.parentPath;
     if (!newExpressionPath.isNewExpression()) {
       throw new MacroError(
-        'Encountered `MuiError` outside of a "new expression" i.e. `new MuiError()`. Use `throw new MuiError(message)` over `throw MuiError(message)`.',
+        'Encountered `MuiError` outside of a "new expression" i.e. `new MuiError()`. Use `throw new Error(message)` over `throw MuiError(message)`.',
       );
     }
 

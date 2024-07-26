@@ -3,7 +3,7 @@ import styleFunctionSx, {
   unstable_defaultSxConfig as defaultSxConfig,
 } from '@temp-mui/system/styleFunctionSx';
 import systemCreateTheme from '@temp-mui/system/createTheme';
-import MuiError from '@temp-mui/internal-babel-macros/MuiError.macro';
+
 import generateUtilityClass from '@temp-mui/utils/generateUtilityClass';
 import createMixins from './createMixins';
 import createPalette from './createPalette';
@@ -25,7 +25,7 @@ function createTheme(options = {}, ...args) {
   } = options;
 
   if (options.vars) {
-    throw new MuiError(
+    throw new Error(
       'MUI: `vars` is a private field used for CSS variables support.\n' +
         'Please use another name.',
     );
